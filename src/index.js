@@ -67,9 +67,7 @@ export default class ServerlessGitVariables {
         value = await _exec('git log -1 --pretty=%B')
         break
       case 'isDirty':
-        const writeTree = await _exec('git write-tree')
-        const changes = await _exec(`git diff-index ${writeTree} --`)
-        value = `${changes.length > 0}`
+        value = (await _exec('git diff --stat')) !== ''
         break
       case 'repository':
         const pathName = await _exec('git rev-parse --show-toplevel')
