@@ -2,7 +2,7 @@
   "presets": [
     ["env", {
       "targets": {
-        "node": 7.0
+        "node": 12.14
       },
       "useBuiltIns": true
     }]

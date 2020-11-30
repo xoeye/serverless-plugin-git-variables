@@ -41,7 +41,7 @@
     "ci:coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
-    "babel-runtime": "6.23.0"
+    "@babel/runtime": "^7.12.5"
   },
   "devDependencies": {
     "ava": "0.20.0",
